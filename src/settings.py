@@ -13,7 +13,7 @@ from dataset_tools.templates import (
 ##################################
 # * Before uploading to instance #
 ##################################
-PROJECT_NAME: str = "TICaM"
+PROJECT_NAME: str = "TiCaM"
 PROJECT_NAME_FULL: str = "TICaM: A Time-of-flight In-car Cabin Monitoring Dataset"
 HIDE_DATASET = True  # set False when 100% sure about repo quality
 
