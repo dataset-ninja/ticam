@@ -1,5 +1,9 @@
 **TICaM: A Time-of-flight In-car Cabin Monitoring Dataset** is a time-of-flight dataset of car in-cabin images providing means to test extensive car cabin monitoring systems based on deep learning methods. The authors provide depth, RGB, and infrared images of front car cabin that have been recorded using a driving simulator capturing various dynamic scenarios that usually occur while driving. For dataset they provide ground truth annotations for 2D and 3D object detection, as well as for instance segmentation.
 
+Note, similar **TICaM: A Time-of-flight In-car Cabin Monitoring Dataset** dataset is also available on the [DatasetNinja.com](https://datasetninja.com/):
+
+- [TICaM Synthetic: A Time-of-flight In-car Cabin Monitoring Dataset](https://datasetninja.com/ticam-synthetic)
+
 ## Dataset description
 
 With the advent of autonomous and driver-less vehicles, it is imperative to monitor the entire in-car cabin scene in order to realize active and passive safety functions, as well as comfort functions and advanced human-vehicle interfaces. Such car cabin monitoring systems typically involve a camera fitted in the overhead module of a car and a suite of algorithms to monitor the environment within a vehicle. To aid these monitoring systems, several in-car datasets exist to train deep leaning methods for solving problems like driver distraction monitoring, occupant detection or activity recognition. The authors present TICaM, an in-car cabin dataset of 6.7K real time-of-flight depth images with ground truth annotations for 2D and 3D object detection, and semantic and instance segmentation. Their intention is to provide a comprehensive in-car cabin depth image dataset that addresses the deficiencies of currently available such datasets in terms of the ambit of labeled classes, recorded scenarios and provided annotations; all at the same time.
