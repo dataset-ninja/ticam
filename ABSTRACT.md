@@ -1,4 +1,4 @@
-**TICaM: A Time-of-flight In-car Cabin Monitoring Dataset** is a time-of-flight dataset of car in-cabin images providing means to test extensive car cabin monitoring systems based on deep learning methods. The authors provide depth, RGB, and infrared images of front car cabin that have been recorded using a driving simulator capturing various dynamic scenarios that usually occur while driving. For dataset they provide ground truth annotations for 2D and 3D object detection, as well as for instance segmentation.
+**TICaM: A Time-of-Flight In-Car Cabin Monitoring Dataset** is a time-of-flight dataset of car in-cabin images providing means to test extensive car cabin monitoring systems based on deep learning methods. The authors provide depth, RGB, and infrared images of front car cabin that have been recorded using a driving simulator capturing various dynamic scenarios that usually occur while driving. For dataset they provide ground truth annotations for 2D and 3D object detection, as well as for instance segmentation.
 
 Note, similar **TICaM: A Time-of-flight In-car Cabin Monitoring Dataset** dataset is also available on the [DatasetNinja.com](https://datasetninja.com/):
 
@@ -12,7 +12,7 @@ With the advent of autonomous and driver-less vehicles, it is imperative to moni
 
 <span style="font-size: smaller; font-style: italic;">Real images. IR-image, depth image with 2D bounding box annotation, segmentation mask.</span>
 
-A noticeable constraint in existing car cabin datasets is the omission of certain frequently encountered driving scenarios. Notably absent are situations involving passengers, commonplace objects, and the presence of children and infants in forward and rearward facing child seats. The authors have conscientiously addressed this limitation by capturing a diverse array of everyday driving scenarios. This meticulous approach ensures that our dataset proves valuable for pivotal automotive safety applications, such as optimizing airbag adjustments. Using the same airbag configuration for both children and adults can pose a fatal risk to the child. Therefore, it is imperative to identify the occupant class (person, child, infant, object, or empty) for each car seat and determine the child seat configuration (forward-facing FF or rearward-facing RF). The dataset also includes annotations for both driver and passenger ***activity***. Recognizing ***activity*** is not only vital for innovative contactless human-machine interfaces but can also be integrated with other modalities, such as driver gaze monitoring. This integration enables a robust estimation of the driver's state, activity, awareness, and distraction—critical factors for hand-over maneuvers in conditional or highly automated driving scenarios. A notable omission in widely used in-car cabin datasets is their lack of multi-modality. 
+A noticeable constraint in existing car cabin datasets is the omission of certain frequently encountered driving scenarios. Notably absent are situations involving passengers, commonplace objects, and the presence of children and infants in forward and rearward facing child seats. The authors have conscientiously addressed this limitation by capturing a diverse array of everyday driving scenarios. This meticulous approach ensures that our dataset proves valuable for pivotal automotive safety applications, such as optimizing airbag adjustments. Using the same airbag configuration for both children and adults can pose a fatal risk to the child. Therefore, it is imperative to identify the occupant class (*person*, *child*, *infant*, *object*, or *empty*) for each car seat and determine the child seat configuration (forward-facing FF or rearward-facing RF). The dataset also includes annotations for both driver and passenger ***activity***. Recognizing ***activity*** is not only vital for innovative contactless human-machine interfaces but can also be integrated with other modalities, such as driver gaze monitoring. This integration enables a robust estimation of the driver's state, activity, awareness, and distraction critical factors for hand-over maneuvers in conditional or highly automated driving scenarios. A notable omission in widely used in-car cabin datasets is their lack of multi-modality. 
 
 In addressing this gap, the authors present a comprehensive set of depth, RGB, and infrared images, emphasizing the inclusion of 3D data annotations. These images were systematically captured within a driving simulator, employing a Kinect Azure device securely positioned near the rear-view mirror. This setup offers a more practical viewpoint compared to other datasets and a mounting position that can be faithfully replicated within actual cars. The utilization of Time-of-Flight depth modality is chosen for its distinct advantages. Depth images offer enhanced privacy as subjects remain unidentifiable, exhibit increased resilience to variations in illumination and color, and facilitate natural background removal. The authors furnish 2D and 3D bounding boxes, along with class and instance masks, for depth images. These annotations can be directly applied for training on infrared images and, with some pre-processing, on RGB images as well. This is possible since the relative rotation and translation between depth and RGB cameras are known and provided. Furthermore, the authors enhance the dataset's comprehensiveness by including annotations for activity recognition tasks, ensuring a thorough coverage of input modalities and ground truth annotations.
 
@@ -22,17 +22,17 @@ For data recording, the authors used an in-car cabin test platform. It consists 
 
 <img src="https://github.com/dataset-ninja/ticam/assets/120389559/672f7287-26c5-40bb-9948-f2f0d17a3d0c" alt="image" width="800">
 
-<span style="font-size: smaller; font-style: italic;">The authors data capturing setup equipped with a wideangle projection system, car front seats and a Kinect Azure camera in the front.</span>
+<span style="font-size: smaller; font-style: italic;">The data capturing setup equipped with a wideangle projection system, car front seats and a Kinect Azure camera in the front.</span>
 
 The authors initiate their dataset creation process by outlining specific use cases or scenarios they aim to include. Subsequently, they document these scenarios with the participation of 13 individuals, comprising 4 females and 9 males. The scenarios encompass various configurations: 
-1) sole presence of the driver, 
-2) presence of both driver and passenger, 
-3) presence of the driver and an object, 
-4) presence of the driver with an empty Forward Facing Child Seat (FF), 
-5) presence of the driver with an empty Rearward Facing Infant Seat (RF), 
-6) presence of the driver with an occupied Forward Facing Child Seat (FF), 
-7) presence of the driver with an occupied Rearward Facing Infant Seat (RF), 
-8) sole presence of an object.
+1) Sole presence of the driver, 
+2) Presence of both driver and passenger, 
+3) Presence of the driver and an object, 
+4) Presence of the driver with an empty Forward Facing Child Seat (FF), 
+5) Presence of the driver with an empty Rearward Facing Infant Seat (RF), 
+6) Presence of the driver with an occupied Forward Facing Child Seat (FF), 
+7) Presence of the driver with an occupied Rearward Facing Infant Seat (RF), 
+8) Sole presence of an object.
 
 To ensure a well-orchestrated dataset, the authors choreograph specific actions for both the driver and passenger. These instructions are shared with participants prior to recording driving sequences. For instance, drivers engage in actions such as sitting, normal driving, looking left while turning the wheel, turning right, and more. On the other hand, passengers perform actions such as conversing with the driver, retrieving items from the dashboard, and the like. In total, the authors delineate 20 distinct actions for both drivers and passengers.
 

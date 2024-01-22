@@ -13,7 +13,7 @@ from dataset_tools.templates import (
 ##################################
 # * Before uploading to instance #
 ##################################
-PROJECT_NAME: str = "TiCaM"
+PROJECT_NAME: str = "TiCaM: Real Images"
 PROJECT_NAME_FULL: str = "TICaM: A Time-of-flight In-car Cabin Monitoring Dataset"
 HIDE_DATASET = True  # set False when 100% sure about repo quality
 
@@ -21,13 +21,14 @@ HIDE_DATASET = True  # set False when 100% sure about repo quality
 # * After uploading to instance ##
 ##################################
 LICENSE: License = License.Unknown()
-APPLICATIONS: List[Union[Industry, Domain, Research]] = [Industry.Safety()]
+APPLICATIONS: List[Union[Industry, Domain, Research]] = [Industry.Safety(), Industry.Automotive()]
 CATEGORY: Category = Category.Safety()
 
 CV_TASKS: List[CVTask] = [
     CVTask.InstanceSegmentation(),
     CVTask.SemanticSegmentation(),
     CVTask.ObjectDetection(),
+    CVTask.MonocularDepthEstimation(),
 ]
 ANNOTATION_TYPES: List[AnnotationType] = [
     AnnotationType.InstanceSegmentation(),
@@ -54,21 +55,39 @@ GITHUB_URL: str = "https://github.com/dataset-ninja/ticam"
 DOWNLOAD_ORIGINAL_URL: Optional[Union[str, dict]] = "https://vizta-tof.kl.dfki.de/download/"
 # Optional link for downloading original dataset (e.g. "https://some.com/dataset/download")
 
-CLASS2COLOR: Optional[Dict[str, List[str]]] = None
+CLASS2COLOR: Optional[Dict[str, List[str]]] = {
+    "accessory": [230, 25, 75],
+    "backpack": [60, 180, 75],
+    "blanket": [255, 225, 25],
+    "book": [0, 130, 200],
+    "box": [245, 130, 48],
+    "child": [145, 30, 180],
+    "ff": [70, 240, 240],
+    "handbag": [240, 50, 230],
+    "infant": [210, 245, 60],
+    "laptop": [250, 190, 212],
+    "laptop bag": [0, 128, 128],
+    "mobile phone": [220, 190, 255],
+    "person": [170, 110, 40],
+    "rf": [255, 250, 200],
+    "water bottle": [128, 0, 0],
+    "winter jacket": [170, 255, 195],
+    "background": [128, 128, 0],
+}
 # If specific colors for classes are needed, fill this dict (e.g. {"class1": [255, 0, 0], "class2": [0, 255, 0]})
 
 # If you have more than the one paper, put the most relatable link as the first element of the list
 # Use dict key to specify name for a button
-PAPER: Optional[Union[str, List[str], Dict[str, str]]] = "https://arxiv.org/pdf/2103.11719.pdf"
+PAPER: Optional[Union[str, List[str], Dict[str, str]]] = "https://arxiv.org/abs/2103.11719"
 BLOGPOST: Optional[Union[str, List[str], Dict[str, str]]] = None
 REPOSITORY: Optional[Union[str, List[str], Dict[str, str]]] = None
 
 CITATION_URL: Optional[str] = None
 AUTHORS: Optional[List[str]] = [
     "Jigyasa Katrolia",
-    "Dr. Jason Raphael Rambach",
-    "Dr. Bruno Mirbach",
-    "Prof. Dr. Didier Stricker",
+    "Jason Raphael Rambach",
+    "Bruno Mirbach",
+    "Didier Stricker",
 ]
 AUTHORS_CONTACTS: Optional[List[str]] = [
     "Jigyasa_Singh.Katrolia@dfki.de",
@@ -84,7 +103,7 @@ ORGANIZATION_URL: Optional[Union[str, List[str]]] = ["https://av.dfki.de/"]
 
 # Set '__PRETEXT__' or '__POSTTEXT__' as a key with string value to add custom text. e.g. SLYTAGSPLIT = {'__POSTTEXT__':'some text}
 SLYTAGSPLIT: Optional[Dict[str, Union[List[str], str]]] = {
-    "__PRETEXT__": "Additionally, images are grouped by ***im id***. Also every image contains information about its ***subfolder***, ***activity***, ***duration***,***person id***,***status***. Explore it in supervisely labeling tool. Images labels have ***low remission*** tag"
+    "__PRETEXT__": "Additionally, images are grouped by ***im id***. Also every image contains information about its ***sequence***, ***activity***, ***duration***, ***person id***, ***status***. Images labels have ***low remission*** tag. Explore it in supervisely labeling tool"
 }
 TAGS: Optional[List[str]] = None
 
