@@ -1,8 +1,8 @@
-**TICaM: A Time-of-Flight In-Car Cabin Monitoring Dataset** is a time-of-flight dataset of car in-cabin images providing means to test extensive car cabin monitoring systems based on deep learning methods. The authors provide depth, RGB, and infrared images of front car cabin that have been recorded using a driving simulator capturing various dynamic scenarios that usually occur while driving. For dataset they provide ground truth annotations for 2D and 3D object detection, as well as for instance segmentation.
+**TICaM Real Images: A Time-of-Flight In-Car Cabin Monitoring Dataset** is a time-of-flight dataset of car in-cabin images providing means to test extensive car cabin monitoring systems based on deep learning methods. The authors provide depth, RGB, and infrared images of front car cabin that have been recorded using a driving simulator capturing various dynamic scenarios that usually occur while driving. For dataset they provide ground truth annotations for 2D and 3D object detection, as well as for instance segmentation.
 
-Note, similar **TICaM: A Time-of-Flight In-Car Cabin Monitoring Dataset** dataset is also available on the [DatasetNinja.com](https://datasetninja.com/):
+Note, similar **TICaM Real Images: A Time-of-Flight In-Car Cabin Monitoring Dataset** dataset is also available on the [DatasetNinja.com](https://datasetninja.com/):
 
-- [TICaM Synthetic: A Time-of-Flight In-Car Cabin Monitoring Dataset](https://datasetninja.com/ticam-synthetic)
+- [TICaM Synthetic Images: A Time-of-Flight In-Car Cabin Monitoring Dataset](https://datasetninja.com/ticam-synthetic)
 
 ## Dataset description
 
@@ -55,7 +55,7 @@ In addition to diversifying the scenarios, the authors introduce variations in t
 
 * **IR Amplitude Image.** Undistorted IR images from the depth sensor are provided in the same format as the depth image above.
 
-* **RGB Image.** Undistorted color images are saved in PNG-format in 24bit depth. While the synthetic RGB images have the same resolution and field of view as the corresponding depth images (512 × 512), the real recorded RGB images have a higher resolution of 1280×720 pixels, but a lower field of view of 90◦×59◦ FOV.
+* **RGB Image.** Undistorted color images are saved in PNG-format in 24bit depth. The recorded RGB images have resolution of 1280×720 pixels, but a lower field of view of 90◦×59◦ FOV.
 
 * **2D bounding boxes.** For each depth image, the 2D boxes are defined by the top-left and bottom-right corners of the box, its class label and a flag ***low remission*** which is set to 1 for objects which are either blac kor very reflective or both, and therefore are barely visible in the depth image.
 

@@ -14,7 +14,7 @@ from dataset_tools.templates import (
 # * Before uploading to instance #
 ##################################
 PROJECT_NAME: str = "TiCaM: Real Images"
-PROJECT_NAME_FULL: str = "TICaM: A Time-of-Flight In-Car Cabin Monitoring Dataset"
+PROJECT_NAME_FULL: str = "TICaM Real Images: A Time-of-Flight In-Car Cabin Monitoring Dataset"
 HIDE_DATASET = True  # set False when 100% sure about repo quality
 
 ##################################
