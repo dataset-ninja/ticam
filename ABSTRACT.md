@@ -48,3 +48,18 @@ In addition to diversifying the scenarios, the authors introduce variations in t
 <img src="https://github.com/dataset-ninja/ticam/assets/120389559/5ec8b42a-6209-411d-8226-c977adfbdf10" alt="image" width="800">
 
 <span style="font-size: smaller; font-style: italic;">Example human dolls and child seats used for recording scenarios with children and infants on the passenger seat.</span>
+
+##  Data Format
+
+* **Depth Z-image.** The depth image is undistorted with a pixel resolution of 512 × 512 pixels and captures a 105◦ × 105◦ FOV. The depth values are normalized to [1mm] resolution and clipped to a range of [0, 2550mm]. Invalid depth values are coded as ‘0’. Images are stored in 16bit PNG-format.
+
+* **IR Amplitude Image.** Undistorted IR images from the depth sensor are provided in the same format as the depth image above.
+
+* **RGB Image.** Undistorted color images are saved in PNG-format in 24bit depth. While the synthetic RGB images have the same resolution and field of view as the corresponding depth images (512 × 512), the real recorded RGB images have a higher resolution of 1280×720 pixels, but a lower field of view of 90◦×59◦ FOV.
+
+* **2D bounding boxes.** For each depth image, the 2D boxes are defined by the top-left and bottom-right corners of the box, its class label and a flag ***low remission*** which is set to 1 for objects which are either blac kor very reflective or both, and therefore are barely visible in the depth image.
+
+* **Pixel segmentation masks.** For each depth image two corresponding masks are generated: instance mask and class mask. The pixel intensities in these
+masks correspond to the class ID in the class mask and the instance ID for a certain class in the instance mask.
+
+* **Activity annotations.** For all sequences with people in the driver or passenger seat, we provide a .csv file describing the activities performed throughout the sequence. Each .csv contains the ***activity*** ID, ***activity*** name, ***person*** ID, a label either driver or passenger to specify if the action is performed by the driver or he passenger, the starting frame number of the action, the ending frame and the ***duration*** of that action in frames.
