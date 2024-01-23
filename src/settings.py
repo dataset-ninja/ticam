@@ -46,7 +46,7 @@ HOMEPAGE_URL: str = "https://vizta-tof.kl.dfki.de/cabin-dataset/"
 PREVIEW_IMAGE_ID: int = 12968323
 # This should be filled AFTER uploading images to instance, just ID of any image.
 
-GITHUB_URL: str = "https://github.com/dataset-ninja/ticam"
+GITHUB_URL: str = "https://github.com/dataset-ninja/ticam-real-images"
 # URL to GitHub repo on dataset ninja (e.g. "https://github.com/dataset-ninja/some-dataset")
 
 ##################################
